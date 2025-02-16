@@ -5,6 +5,7 @@ import coil.ImageLoader
 import coil.ImageLoaderFactory
 import coil.disk.DiskCache
 import coil.memory.MemoryCache
+import androidx.work.Configuration
 import androidx.work.Constraints
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.NetworkType
@@ -12,10 +13,19 @@ import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import com.example.audiobookplayer.data.AudiobookScannerWorker
 import dagger.hilt.android.HiltAndroidApp
+import javax.inject.Inject
 import java.util.concurrent.TimeUnit
 
 @HiltAndroidApp
-class AudiobookApplication : Application(), ImageLoaderFactory {
+class AudiobookApplication : Application(), ImageLoaderFactory, Configuration.Provider {
+    @Inject
+    lateinit var workerFactory: HiltWorkerFactory
+
+    override fun getWorkManagerConfiguration(): Configuration {
+        return Configuration.Builder()
+            .setWorkerFactory(workerFactory)
+            .build()
+    }
 
     override fun onCreate() {
         super.onCreate()
@@ -37,7 +47,9 @@ class AudiobookApplication : Application(), ImageLoaderFactory {
             ExistingPeriodicWorkPolicy.REPLACE,
             scanRequest
         )
-        override fun newImageLoader(): ImageLoader {
+    }
+
+    override fun newImageLoader(): ImageLoader {
         return ImageLoader.Builder(this)
             .memoryCache {
                 MemoryCache.Builder(this)
@@ -53,5 +65,4 @@ class AudiobookApplication : Application(), ImageLoaderFactory {
             .crossfade(true)
             .build()
     }
-}
 }

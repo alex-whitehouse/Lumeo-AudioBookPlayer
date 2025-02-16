@@ -15,10 +15,10 @@ ADDED from /home/alex/Documents/audiobook-player/app/src/main/AndroidManifest.xm
 INJECTED from /home/alex/Documents/audiobook-player/app/src/main/AndroidManifest.xml:1:1-53:12
 INJECTED from /home/alex/Documents/audiobook-player/app/src/main/AndroidManifest.xml:1:1-53:12
 INJECTED from /home/alex/Documents/audiobook-player/app/src/main/AndroidManifest.xml:1:1-53:12
-MERGED from [androidx.hilt:hilt-work:1.0.0] /home/alex/.gradle/caches/transforms-4/7440b9ea7cac0ca741d59caa2eabb53e/transformed/jetified-hilt-work-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.hilt:hilt-work:1.1.0-alpha01] /home/alex/.gradle/caches/transforms-4/77da969346904c5d7603e4939747839a/transformed/jetified-hilt-work-1.1.0-alpha01/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.hilt:hilt-navigation-compose:1.0.0] /home/alex/.gradle/caches/transforms-4/ecc73c269cc028e92734f6bb99e498c6/transformed/jetified-hilt-navigation-compose-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.hilt:hilt-navigation:1.0.0] /home/alex/.gradle/caches/transforms-4/74a6b80fb7ea9a12d09aab950402f2e7/transformed/jetified-hilt-navigation-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.dagger:hilt-android:2.44] /home/alex/.gradle/caches/transforms-4/779eef014558ec4874062d9b67099be9/transformed/jetified-hilt-android-2.44/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.dagger:hilt-android:2.48] /home/alex/.gradle/caches/transforms-4/937fbe851176afb55516585ee09d1cd6/transformed/jetified-hilt-android-2.48/AndroidManifest.xml:16:1-19:12
 MERGED from [androidx.work:work-runtime-ktx:2.8.1] /home/alex/.gradle/caches/transforms-4/3aa5dcf036b2749751e703885941016a/transformed/work-runtime-ktx-2.8.1/AndroidManifest.xml:17:1-22:12
 MERGED from [io.coil-kt:coil-compose:2.4.0] /home/alex/.gradle/caches/transforms-4/7044721162f5a6dc4ec751e6938c8dfb/transformed/jetified-coil-compose-2.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.material3:material3:1.1.1] /home/alex/.gradle/caches/transforms-4/14de4bc46e9406681656cc41c42b8b5b/transformed/jetified-material3-1.1.1/AndroidManifest.xml:17:1-22:12
@@ -142,7 +142,7 @@ MERGED from [androidx.print:print:1.0.0] /home/alex/.gradle/caches/transforms-4/
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/alex/.gradle/caches/transforms-4/27a8902317536e3029f6b7f1fc7bf478/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/alex/.gradle/caches/transforms-4/7dab61bb41916512334ffeba1e60df9f/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.billingclient:billing:5.0.0] /home/alex/.gradle/caches/transforms-4/96936032791b62748b6a1de04dabc093/transformed/jetified-billing-5.0.0/AndroidManifest.xml:2:1-24:12
-MERGED from [com.google.dagger:dagger-lint-aar:2.44] /home/alex/.gradle/caches/transforms-4/5903f07b073e3612d27798743b70d016/transformed/jetified-dagger-lint-aar-2.44/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.48] /home/alex/.gradle/caches/transforms-4/abf65c0421b6a1472fa8cc508f3e553d/transformed/jetified-dagger-lint-aar-2.48/AndroidManifest.xml:16:1-19:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /home/alex/.gradle/caches/transforms-4/fe4845e3c9835b61d8d97c77ef57d370/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
 	package
 		INJECTED from /home/alex/Documents/audiobook-player/app/src/main/AndroidManifest.xml
@@ -335,14 +335,14 @@ uses-sdk
 INJECTED from /home/alex/Documents/audiobook-player/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/alex/Documents/audiobook-player/app/src/main/AndroidManifest.xml
 INJECTED from /home/alex/Documents/audiobook-player/app/src/main/AndroidManifest.xml
-MERGED from [androidx.hilt:hilt-work:1.0.0] /home/alex/.gradle/caches/transforms-4/7440b9ea7cac0ca741d59caa2eabb53e/transformed/jetified-hilt-work-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.hilt:hilt-work:1.0.0] /home/alex/.gradle/caches/transforms-4/7440b9ea7cac0ca741d59caa2eabb53e/transformed/jetified-hilt-work-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.hilt:hilt-work:1.1.0-alpha01] /home/alex/.gradle/caches/transforms-4/77da969346904c5d7603e4939747839a/transformed/jetified-hilt-work-1.1.0-alpha01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.hilt:hilt-work:1.1.0-alpha01] /home/alex/.gradle/caches/transforms-4/77da969346904c5d7603e4939747839a/transformed/jetified-hilt-work-1.1.0-alpha01/AndroidManifest.xml:20:5-44
 MERGED from [androidx.hilt:hilt-navigation-compose:1.0.0] /home/alex/.gradle/caches/transforms-4/ecc73c269cc028e92734f6bb99e498c6/transformed/jetified-hilt-navigation-compose-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.hilt:hilt-navigation-compose:1.0.0] /home/alex/.gradle/caches/transforms-4/ecc73c269cc028e92734f6bb99e498c6/transformed/jetified-hilt-navigation-compose-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.hilt:hilt-navigation:1.0.0] /home/alex/.gradle/caches/transforms-4/74a6b80fb7ea9a12d09aab950402f2e7/transformed/jetified-hilt-navigation-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.hilt:hilt-navigation:1.0.0] /home/alex/.gradle/caches/transforms-4/74a6b80fb7ea9a12d09aab950402f2e7/transformed/jetified-hilt-navigation-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.dagger:hilt-android:2.44] /home/alex/.gradle/caches/transforms-4/779eef014558ec4874062d9b67099be9/transformed/jetified-hilt-android-2.44/AndroidManifest.xml:18:3-42
-MERGED from [com.google.dagger:hilt-android:2.44] /home/alex/.gradle/caches/transforms-4/779eef014558ec4874062d9b67099be9/transformed/jetified-hilt-android-2.44/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.48] /home/alex/.gradle/caches/transforms-4/937fbe851176afb55516585ee09d1cd6/transformed/jetified-hilt-android-2.48/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.48] /home/alex/.gradle/caches/transforms-4/937fbe851176afb55516585ee09d1cd6/transformed/jetified-hilt-android-2.48/AndroidManifest.xml:18:3-42
 MERGED from [androidx.work:work-runtime-ktx:2.8.1] /home/alex/.gradle/caches/transforms-4/3aa5dcf036b2749751e703885941016a/transformed/work-runtime-ktx-2.8.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.work:work-runtime-ktx:2.8.1] /home/alex/.gradle/caches/transforms-4/3aa5dcf036b2749751e703885941016a/transformed/work-runtime-ktx-2.8.1/AndroidManifest.xml:20:5-44
 MERGED from [io.coil-kt:coil-compose:2.4.0] /home/alex/.gradle/caches/transforms-4/7044721162f5a6dc4ec751e6938c8dfb/transformed/jetified-coil-compose-2.4.0/AndroidManifest.xml:5:5-44
@@ -589,8 +589,8 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/alex/.gradle/cach
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/alex/.gradle/caches/transforms-4/7dab61bb41916512334ffeba1e60df9f/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.android.billingclient:billing:5.0.0] /home/alex/.gradle/caches/transforms-4/96936032791b62748b6a1de04dabc093/transformed/jetified-billing-5.0.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.android.billingclient:billing:5.0.0] /home/alex/.gradle/caches/transforms-4/96936032791b62748b6a1de04dabc093/transformed/jetified-billing-5.0.0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.dagger:dagger-lint-aar:2.44] /home/alex/.gradle/caches/transforms-4/5903f07b073e3612d27798743b70d016/transformed/jetified-dagger-lint-aar-2.44/AndroidManifest.xml:18:3-42
-MERGED from [com.google.dagger:dagger-lint-aar:2.44] /home/alex/.gradle/caches/transforms-4/5903f07b073e3612d27798743b70d016/transformed/jetified-dagger-lint-aar-2.44/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.48] /home/alex/.gradle/caches/transforms-4/abf65c0421b6a1472fa8cc508f3e553d/transformed/jetified-dagger-lint-aar-2.48/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.48] /home/alex/.gradle/caches/transforms-4/abf65c0421b6a1472fa8cc508f3e553d/transformed/jetified-dagger-lint-aar-2.48/AndroidManifest.xml:18:3-42
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /home/alex/.gradle/caches/transforms-4/fe4845e3c9835b61d8d97c77ef57d370/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /home/alex/.gradle/caches/transforms-4/fe4845e3c9835b61d8d97c77ef57d370/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary

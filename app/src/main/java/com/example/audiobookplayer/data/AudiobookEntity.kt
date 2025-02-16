@@ -6,6 +6,7 @@ import androidx.room.TypeConverters
 import com.example.audiobookplayer.common.enums.BookStatus
 
 @Entity(tableName = "audiobooks")
+@TypeConverters(com.example.audiobookplayer.data.TypeConverters::class)
 data class AudiobookEntity(
     @PrimaryKey val id: String,
     val title: String,
@@ -15,6 +16,5 @@ data class AudiobookEntity(
     val currentPosition: Long = 0,
     val lastPlayed: Long = System.currentTimeMillis(),
     val status: BookStatus = BookStatus.NEW,
-    @TypeConverters(TypeConverters::class)
     val audioFiles: List<String> // URIs of audio files
 )
