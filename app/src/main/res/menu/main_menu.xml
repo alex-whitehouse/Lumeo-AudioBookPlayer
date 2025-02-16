@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_sort"
+        android:title="@string/sort_by"
+        android:icon="@drawable/ic_sort"
+        android:showAsAction="ifRoom">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/sort_recent"
+                    android:title="@string/sort_recent"
+                    android:checked="true" />
+                <item
+                    android:id="@+id/sort_title"
+                    android:title="@string/sort_title" />
+                <item
+                    android:id="@+id/sort_progress"
+                    android:title="@string/sort_progress" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_filter"
+        android:title="@string/filter_by"
+        android:icon="@drawable/ic_filter"
+        android:showAsAction="ifRoom">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/filter_all"
+                    android:title="@string/filter_all"
+                    android:checked="true" />
+                <item
+                    android:id="@+id/filter_new"
+                    android:title="@string/filter_new" />
+                <item
+                    android:id="@+id/filter_started"
+                    android:title="@string/filter_started" />
+                <item
+                    android:id="@+id/filter_finished"
+                    android:title="@string/filter_finished" />
+            </group>
+        </menu>
+    </item>
+
     <item
         android:id="@+id/action_sleep_timer"
         android:title="@string/action_sleep_timer"
         android:icon="@drawable/ic_sleep_timer"
         android:showAsAction="ifRoom" />
+
 </menu>

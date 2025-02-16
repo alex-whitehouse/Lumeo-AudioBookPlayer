@@ -20,4 +20,25 @@
     <string name="chapter_info">Chapter 0 of 0</string>
     <string name="progress_update">Playback progress updated</string>
     <string name="position_saved">Playback position saved</string>
+
+    <!-- Library Screen Strings -->
+    <string name="sort_recent">Recent</string>
+    <string name="sort_title">Title</string>
+    <string name="sort_progress">Progress</string>
+    <string name="filter_all">All</string>
+    <string name="filter_new">New</string>
+    <string name="filter_started">Started</string>
+    <string name="filter_finished">Finished</string>
+    <string name="empty_library">No audiobooks found</string>
+    <string name="permission_denied">Storage permission denied</string>
+    <string name="corrupted_file">Corrupted file detected</string>
+    <!-- Library Screen -->
+    <string name="library_title">My Audiobooks</string>
+    <string name="toggle_view">Toggle view mode</string>
+    
+    <!-- Menu Strings -->
+    <string name="sort_by">Sort By</string>
+    <string name="filter_by">Filter By</string>
+    <string name="empty_library_message">You don\'t have any audiobooks yet.\\nTap + to add your first book.</string>
+
 </resources>

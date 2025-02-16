@@ -1,23 +1,47 @@
 plugins {
     id 'com.android.application'
-    id 'kotlin-android'
-    id 'com.google.gms.google-services' // Firebase plugin
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.dagger.hilt.android'
 }
 
+dependencies {
+    // Hilt dependencies
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-android-compiler:2.44"
+    implementation "androidx.hilt:hilt-work:1.0.0"
+    kapt "androidx.hilt:hilt-compiler:1.0.0"
+    implementation "androidx.hilt:hilt-navigation-compose:1.0.0"
+}
 android {
-    compileSdkVersion 33
+    namespace 'com.example.audiobookplayer'
+    compileSdk 34
 
-    buildFeatures {
-        viewBinding true
-    }
     defaultConfig {
         applicationId "com.example.audiobookplayer"
-        minSdkVersion 21
-        targetSdkVersion 33
+        minSdk 21
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+        // Room schema export
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.3'
     }
 
     buildTypes {
@@ -26,17 +50,62 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+
     kotlinOptions {
         jvmTarget = '17'
     }
-    namespace 'com.example.audiobookplayer'
+
+    packaging {
+        resources.excludes.add("META-INF/{AL2.0,LGPL2.1}")
+    }
 }
 
 dependencies {
+    // WorkManager
+    implementation "androidx.work:work-runtime-ktx:2.8.1"
+
+    // Image loading
+    implementation "io.coil-kt:coil-compose:2.4.0"
+
+    // Material 3
+    implementation 'androidx.compose.material3:material3:1.1.1'
+
+    // DataStore Preferences
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    // Permissions handling
+    implementation "androidx.activity:activity-ktx:1.7.0"
+    
+    // Paging
+    implementation "androidx.paging:paging-runtime-ktx:3.1.1"
+    implementation "androidx.paging:paging-compose:1.0.0-alpha18"
+    // Hilt dependencies
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-android-compiler:2.44"
+    implementation "androidx.hilt:hilt-work:1.0.0"
+    implementation "androidx.hilt:hilt-navigation-compose:1.0.0"
+
+    // Room components
+    implementation "androidx.room:room-runtime:2.5.1"
+    kapt "androidx.room:room-compiler:2.5.1"
+    implementation "androidx.room:room-ktx:2.5.1"
+    implementation "androidx.room:room-paging:2.5.1"
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    
+    // Kotlin coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1"
+    
+    // Gson for TypeConverters
+    implementation 'com.google.code.gson:gson:2.8.9'
     // View model and lifecycle
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'

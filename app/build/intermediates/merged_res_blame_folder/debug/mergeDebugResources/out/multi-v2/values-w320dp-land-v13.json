@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.audiobookplayer.app-mergeDebugResources-36:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+            "outputFile": "com.example.audiobookplayer.app-mergeDebugResources-83:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/home/alex/.gradle/caches/transforms-4/f46d3d681dd2cfedab9a78ae9a9550c1/transformed/material-1.8.0/res/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+                    "source": "/home/alex/.gradle/caches/transforms-4/90b685f6966ecaf29d95b3e7014b0119/transformed/material-1.8.0/res/values-w320dp-land-v13/values-w320dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

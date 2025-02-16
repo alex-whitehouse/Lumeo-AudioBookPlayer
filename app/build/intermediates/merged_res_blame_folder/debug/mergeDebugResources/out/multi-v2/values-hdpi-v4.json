@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.audiobookplayer.app-mergeDebugResources-36:/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "com.example.audiobookplayer.app-mergeDebugResources-83:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/home/alex/.gradle/caches/transforms-4/59a8cf1ad5172a135cc9cb780264734a/transformed/appcompat-1.5.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "/home/alex/.gradle/caches/transforms-4/58ccda71d6829a170250418b328d3bcc/transformed/appcompat-1.6.1/res/values-hdpi-v4/values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

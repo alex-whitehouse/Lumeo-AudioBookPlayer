@@ -18,14 +18,24 @@
     <string name="book_cover">Book Cover</string>
     <string name="book_title">Book Title</string>
     <string name="chapter_info">Chapter 0 of 0</string>
+    <string name="corrupted_file">Corrupted file detected</string>
     <string name="default_web_client_id" translatable="false">000000000000-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com</string>
+    <string name="empty_library">No audiobooks found</string>
+    <string name="empty_library_message">You don\'t have any audiobooks yet.\\nTap + to add your first book.</string>
+    <string name="filter_all">All</string>
+    <string name="filter_by">Filter By</string>
+    <string name="filter_finished">Finished</string>
+    <string name="filter_new">New</string>
+    <string name="filter_started">Started</string>
     <string name="firebase_database_url" translatable="false">https://example.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">000000000000</string>
     <string name="google_api_key" translatable="false">placeholder_api_key</string>
     <string name="google_app_id" translatable="false">1:000000000000:android:0000000000000000</string>
     <string name="google_crash_reporting_api_key" translatable="false">placeholder_api_key</string>
     <string name="google_storage_bucket" translatable="false">example.appspot.com</string>
+    <string name="library_title">My Audiobooks</string>
     <string name="pause">Pause</string>
+    <string name="permission_denied">Storage permission denied</string>
     <string name="play">Play</string>
     <string name="position_saved">Playback position saved</string>
     <string name="progress_update">Playback progress updated</string>
@@ -34,7 +44,12 @@
     <string name="skip_previous">Skip Previous</string>
     <string name="sleep_timer">Sleep Timer</string>
     <string name="sleep_timer_active">Sleep timer active</string>
+    <string name="sort_by">Sort By</string>
+    <string name="sort_progress">Progress</string>
+    <string name="sort_recent">Recent</string>
+    <string name="sort_title">Title</string>
     <string name="time_remaining">Time remaining</string>
+    <string name="toggle_view">Toggle view mode</string>
     <style name="Theme.AudiobookPlayer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>
