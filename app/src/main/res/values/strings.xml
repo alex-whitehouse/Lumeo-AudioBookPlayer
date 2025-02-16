@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Audiobook Player</string>
+    <string name="book_cover">Book Cover</string>
+    <string name="skip_previous">Skip Previous</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="skip_next">Skip Next</string>
+    <string name="sleep_timer">Sleep Timer</string>
+    <string name="book_title">Book Title</string>
+    <string name="action_previous_chapter">Previous Chapter</string>
+    <string name="action_play">Play</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_next_chapter">Next Chapter</string>
+    <string name="action_sleep_timer">Set Sleep Timer</string>
+    <string name="time_remaining">Time remaining</string>
+    <string name="sleep_timer_active">Sleep timer active</string>
+    
+    <!-- Accessibility Strings -->
+    <string name="action_open_file">Open Audiobook File</string>
+    <string name="chapter_info">Chapter 0 of 0</string>
+    <string name="progress_update">Playback progress updated</string>
+    <string name="position_saved">Playback position saved</string>
+</resources>
