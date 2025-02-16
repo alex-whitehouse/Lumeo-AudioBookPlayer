@@ -13,11 +13,13 @@ import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import com.example.audiobookplayer.data.AudiobookScannerWorker
 import dagger.hilt.android.HiltAndroidApp
+import androidx.hilt.work.HiltWorkerFactory
 import javax.inject.Inject
 import java.util.concurrent.TimeUnit
 
 @HiltAndroidApp
 class AudiobookApplication : Application(), ImageLoaderFactory, Configuration.Provider {
+
     @Inject
     lateinit var workerFactory: HiltWorkerFactory
 

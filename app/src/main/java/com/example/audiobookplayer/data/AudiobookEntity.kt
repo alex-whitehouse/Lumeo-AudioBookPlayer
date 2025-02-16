@@ -16,5 +16,9 @@ data class AudiobookEntity(
     val currentPosition: Long = 0,
     val lastPlayed: Long = System.currentTimeMillis(),
     val status: BookStatus = BookStatus.NEW,
-    val audioFiles: List<String> // URIs of audio files
+    val audioFiles: List<String>, // URIs of audio files
+    val folderPath: String? = null,
+    val fileSize: Long = 0L,
+    val isFavorite: Boolean = false,
+    val sleepTimerEndTime: Long? = null
 )

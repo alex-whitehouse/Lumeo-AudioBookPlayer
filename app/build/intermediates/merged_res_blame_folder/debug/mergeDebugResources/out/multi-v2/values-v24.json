@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.audiobookplayer.app-mergeDebugResources-83:/values-v24/values-v24.xml",
+            "outputFile": "com.example.audiobookplayer.app-mergeDebugResources-90:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/alex/.gradle/caches/transforms-4/fb8a95d62daa7e53ace755f2bc948578/transformed/media-1.6.0/res/values-v24/values-v24.xml",
+                    "source": "/home/alex/.gradle/caches/8.8/transforms/252e15b8da9725df29dcf6363593f8ca/transformed/media-1.6.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,17 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/alex/.gradle/caches/transforms-4/58ccda71d6829a170250418b328d3bcc/transformed/appcompat-1.6.1/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "/home/alex/.gradle/caches/transforms-4/90b685f6966ecaf29d95b3e7014b0119/transformed/material-1.8.0/res/values-v24/values-v24.xml",
+                    "source": "/home/alex/.gradle/caches/8.8/transforms/c3bb386fd176437bdacb7be4670e95a1/transformed/material-1.8.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -47,6 +37,16 @@
                         "endLines": "4,5,6,7,10,13,16,19",
                         "endColumns": "84,98,86,100,10,10,10,10",
                         "endOffsets": "427,526,613,714,913,1126,1327,1542"
+                    }
+                },
+                {
+                    "source": "/home/alex/.gradle/caches/8.8/transforms/9dc3d8f9983bc1032cc05ba40a96d9cc/transformed/appcompat-1.6.1/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
                     }
                 }
             ]

@@ -15,6 +15,9 @@ import android.os.IBinder
 import androidx.core.app.NotificationCompat
 import androidx.media.session.MediaButtonReceiver
 import android.support.v4.media.session.MediaSessionCompat
+import androidx.lifecycle.viewModelScope
+import com.example.audiobookplayer.data.ServiceLocator
+import kotlinx.coroutines.delay
 import androidx.media.utils.MediaConstants
 import android.media.MediaMetadataRetriever
 import com.google.firebase.firestore.FirebaseFirestore
@@ -28,11 +31,15 @@ class AudioPlaybackService : Service() {
     private var currentFilePath: String? = null
     private var currentChapter = 1
     private val chapterMarks = mutableListOf<Int>()
-    private var sleepTimer: CountDownTimer? = null
-    private var sleepTimerActive = false
-    private var sleepTimerMinutes = 0
+    private var sleepTimerEndTime: Long = 0
+    private val sleepTimerInterval = 1000L // 1 second
+    private lateinit var repository: AudiobookRepository
     private var mediaSession: MediaSessionCompat? = null
     private var firestore: FirebaseFirestore? = null
+    
+    private var currentBookId: String? = null
+    private var sleepTimerActive: Boolean = false
+    private var sleepTimerMinutes: Int = 0
 
     fun getCurrentChapter(): Int = currentChapter
 
@@ -53,6 +60,9 @@ class AudioPlaybackService : Service() {
         createNotificationChannel()
         notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         
+        // Initialize dependencies
+        repository = ServiceLocator.provideAudiobookRepository(this)
+        
         // Initialize media session and other components
         mediaSession = MediaSessionCompat(this, "AudioPlaybackService").apply {
             setFlags(
@@ -63,6 +73,16 @@ class AudioPlaybackService : Service() {
         }
         createMediaSession()
         initializeFirebase()
+        loadSleepTimer()
+    }
+
+    private fun loadSleepTimer() {
+        viewModelScope.launch {
+            sleepTimerEndTime = repository.getSleepTimerEndTime(currentBookId ?: "") ?: 0
+            if (sleepTimerEndTime > System.currentTimeMillis()) {
+                startSleepTimerCountdown()
+            }
+        }
     }
 
     override fun onDestroy() {
@@ -129,29 +149,36 @@ class AudioPlaybackService : Service() {
         }
     }
 
-    fun setSleepTimer(minutes: Int) {
-        cancelSleepTimer()
-        sleepTimerActive = true
-        sleepTimerMinutes = minutes
-        sleepTimer = object : CountDownTimer(minutes * 60 * 1000L, 1000) {
-            override fun onTick(millisUntilFinished: Long) {
-                updateNotification("Sleeping in ${millisUntilFinished / 1000}s")
-            }
+    fun setSleepTimer(endTime: Long) {
+        viewModelScope.launch {
+            repository.setSleepTimer(currentBookId ?: "", endTime)
+            sleepTimerEndTime = endTime
+            startSleepTimerCountdown()
+        }
+    }
 
-            override fun onFinish() {
-                pauseAudio()
-                sleepTimerActive = false
-                sleepTimerMinutes = 0
+    private fun startSleepTimerCountdown() {
+        viewModelScope.launch {
+            while (System.currentTimeMillis() < sleepTimerEndTime) {
+                delay(sleepTimerInterval)
+                val remainingTime = sleepTimerEndTime - System.currentTimeMillis()
+                if (remainingTime > 0) {
+                    updateNotification("Sleeping in ${remainingTime / 1000}s")
+                } else {
+                    pauseAudio()
+                    repository.setSleepTimer(currentBookId ?: "", 0)
+                    break
+                }
             }
-        }.start()
+        }
     }
 
     fun cancelSleepTimer() {
-        sleepTimer?.cancel()
-        sleepTimer = null
-        sleepTimerActive = false
-        sleepTimerMinutes = 0
-        showNotification()
+        viewModelScope.launch {
+            repository.setSleepTimer(currentBookId ?: "", 0)
+            sleepTimerEndTime = 0
+            showNotification()
+        }
     }
 
     fun loadChapterMarks(filePath: String) {

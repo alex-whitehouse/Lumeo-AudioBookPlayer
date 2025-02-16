@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.audiobookplayer.app-mergeDebugResources-83:/values-v22/values-v22.xml",
+            "outputFile": "com.example.audiobookplayer.app-mergeDebugResources-90:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "/home/alex/.gradle/caches/transforms-4/58ccda71d6829a170250418b328d3bcc/transformed/appcompat-1.6.1/res/values-v22/values-v22.xml",
+                    "source": "/home/alex/.gradle/caches/8.8/transforms/9dc3d8f9983bc1032cc05ba40a96d9cc/transformed/appcompat-1.6.1/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",
